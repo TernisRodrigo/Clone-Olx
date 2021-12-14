@@ -1,21 +1,18 @@
-import { StatusBar } from 'expo-status-bar';
+import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView} from 'react-native';
+import Routes from './src/Routes';
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+  return (    
+    
+      <SafeAreaView style={{flex: 1, backgroundColor: '#f5f5f5', marginTop: 20 }}>
+        <NavigationContainer>
+        <Routes/>
+        </NavigationContainer>
+       
+      </SafeAreaView>    
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
